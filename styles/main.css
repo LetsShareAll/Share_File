@@ -1,0 +1,61 @@
+.file_list {
+  padding-left: 0;
+}
+
+.file {
+  display: flex;
+}
+
+.file_info {
+  padding-top: 0.3rem;
+  padding-right: 0.5rem;
+  border-bottom: 0.1rem groove black;
+}
+
+.file_icon {
+  width: 1rem;
+  margin-top: 0.3rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon_directory {
+  background-image: url("/images/directory.png");
+}
+
+.icon_archive {
+  background-image: url("/images/archive.jpg");
+}
+
+.icon_executable {
+  background-image: url("/images/executable.png");
+}
+
+.icon_font {
+  background-image: url("/images/font.png");
+}
+
+.file_name {
+  display: flex;
+  flex: 3;
+}
+
+.file_type {
+  display: flex;
+  flex: 2;
+}
+
+.file_version {
+  display: flex;
+  flex: 5;
+}
+
+.file_date {
+  display: flex;
+  flex: 2;
+}
+
+.file_description {
+  display: flex;
+  flex: auto;
+}

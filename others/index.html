@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/icon.webp" type="image/x-icon" />
-    <title>/Others-一起分享吧</title>
-  </head>
-  <body>
-    <h1>欢迎来到一起分享吧的文件托管网站！</h1>
-    <p>————</p>
-    <h2>目录：</h2>
-    <p>——</p>
-    <h3><a href="../">File</a>/Others</h3>
-    <div>
-      <ul>
-        <li>
-          <a href="./fonts/">Fonts</a>
-          <span>文件夹</span>
-          <span>2022/05/19</span>
-          <span>字体</span>
-        </li>
-      </ul>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/icon.webp" type="image/x-icon" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>/Others-一起分享吧</title>
+</head>
+
+<body>
+  <h1>欢迎来到一起分享吧的文件托管网站！</h1>
+  <p>————</p>
+  <h2>目录：</h2>
+  <p>——</p>
+  <h3><a href="../">File</a>/Others</h3>
+  <div>
+    <ul class="file_list">
+      <li class="file">
+        <span class="file_info file_icon"></span>
+        <span class="file_info file_name">名称</span>
+        <span class="file_info file_type">类型</span>
+        <span class="file_info file_version">版本</span>
+        <span class="file_info file_date">更新日期</span>
+        <span class="file_info file_description">备注</span>
+      </li>
+      <li class="file">
+        <span class="file_info file_icon icon_directory"></span>
+        <a class="file_info file_name" href="./fonts/">Fonts</a>
+        <span class="file_info file_type">文件夹</span>
+        <span class="file_info file_version">-</span>
+        <span class="file_info file_date">2022/05/19</span>
+        <span class="file_info file_description">字体</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>

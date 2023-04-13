@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/icon.webp" type="image/x-icon">
-    <title>文件托管网站-一起分享吧</title>
-  </head>
-  <body>
-    <h1>欢迎来到一起分享吧的文件托管网站！</h1>
-    <p>————</p>
-    <h2>目录：</h2>
-    <p>——</p>
-    <h3>File</h3>
-    <div>
-      <ul>
-        <li>
-          <a href="./applications/">Applications</a>
-          <span>文件夹</span>
-          <span>2022/05/19</span>
-          <span>应用程序</span>
-        </li>
-        <li>
-          <a href="./games/">Games</a>
-          <span>文件夹</span>
-          <span>2022/06/02</span>
-          <span>游戏</span>
-        </li>
-        <li>
-          <a href="./others/">Others</a>
-          <span>文件夹</span>
-          <span>2022/05/26</span>
-          <span>其他</span>
-        </li>
-      </ul>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/icon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>文件托管网站-一起分享吧</title>
+</head>
+
+<body>
+  <h1>欢迎来到一起分享吧的文件托管网站！</h1>
+  <p>————</p>
+  <h2>目录：</h2>
+  <p>——</p>
+  <h3>File</h3>
+  <div>
+    <ul class="file_list">
+      <li class="file">
+        <span class="file_info file_icon"></span>
+        <span class="file_info file_name">名称</span>
+        <span class="file_info file_type">类型</span>
+        <span class="file_info file_version">版本</span>
+        <span class="file_info file_date">更新日期</span>
+        <span class="file_info file_description">备注</span>
+      </li>
+      <li class="file">
+        <span class="file_info file_icon icon_directory"></span>
+        <a class="file_info file_name" href="./applications/">Applications</a>
+        <span class="file_info file_type">文件夹</span>
+        <span class="file_info file_version">-</span>
+        <span class="file_info file_date">2022/05/19</span>
+        <span class="file_info file_description">应用程序</span>
+      </li>
+      <li class="file">
+        <span class="file_info file_icon icon_directory"></span>
+        <a class="file_info file_name" href="./games/">Games</a>
+        <span class="file_info file_type">文件夹</span>
+        <span class="file_info file_version">-</span>
+        <span class="file_info file_date">2022/06/02</span>
+        <span class="file_info file_description">游戏</span>
+      </li>
+      <li class="file">
+        <span class="file_info file_icon icon_directory"></span>
+        <a class="file_info file_name" href="./others/">Others</a>
+        <span class="file_info file_type">文件夹</span>
+        <span class="file_info file_version">-</span>
+        <span class="file_info file_date">2022/05/26</span>
+        <span class="file_info file_description">其他</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
