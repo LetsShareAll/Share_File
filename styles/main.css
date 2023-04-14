@@ -37,25 +37,25 @@
 
 .file_name {
   display: flex;
-  flex: 3;
+  flex: 2;
 }
 
 .file_type {
   display: flex;
-  flex: 2;
+  flex: 1;
 }
 
 .file_version {
   display: flex;
-  flex: 5;
+  flex: 3;
 }
 
 .file_date {
   display: flex;
-  flex: 2;
+  flex: 1;
 }
 
 .file_description {
   display: flex;
-  flex: auto;
+  flex: 3;
 }
