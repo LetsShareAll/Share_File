@@ -20,19 +20,19 @@
 }
 
 .icon_directory {
-  background-image: url("/images/directory.png");
+  background-image: url("/pictures/directory.png");
 }
 
 .icon_archive {
-  background-image: url("/images/archive.jpg");
+  background-image: url("/pictures/archive.jpg");
 }
 
 .icon_executable {
-  background-image: url("/images/executable.png");
+  background-image: url("/pictures/executable.png");
 }
 
 .icon_font {
-  background-image: url("/images/font.png");
+  background-image: url("/pictures/font.png");
 }
 
 .file_name {
