@@ -1,0 +1,36 @@
+/**
+ * 文件重定向地址。
+ * @type {string}
+ */
+const fileRedirectURL = '';
+
+/**
+ * 包含文件信息的数组。
+ * @type {Array}
+ */
+const fileList = [
+  {
+    iconClass: '',
+    name: '名称',
+    type: '类型',
+    version: '版本',
+    date: '更新日期',
+    description: '备注'
+  },
+  {
+    iconClass: 'icon-archive',
+    name: 'Let`s Play All.zip',
+    type: '压缩 (zipped) 文件',
+    version: '1.19.0.2',
+    date: '2022/06/16',
+    description: 'Minecraft Java 整合包'
+  },
+  {
+    iconClass: 'icon-archive',
+    name: 'Let`s Play All with HMCL.zip',
+    type: '压缩 (zipped) 文件',
+    version: '1.19.0.2',
+    date: '2022/06/16',
+    description: '带有 HMCL 的 Minecraft Java 整合包'
+  }
+];
