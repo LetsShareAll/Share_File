@@ -22,7 +22,7 @@ const redirectFileInfo = {
 const fileList = [
   {
     iconClass: 'icon-directory',
-    name: 'Java',
+    name: 'java',
     type: '文件夹',
     version: '-',
     date: '2022/06/02',
