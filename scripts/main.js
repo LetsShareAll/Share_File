@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     // 设置页面标题
     setPageTitle()
 
-    // 更新文件重定向地址
-    updateFileRedirectURL(fileRedirectURL)
+    // 处理文件重定向
+    handleRedirect(redirectFileInfo)
 
     // 异步加载脚本文件
     await loadScript('/scripts/load-template.js')

@@ -11,18 +11,28 @@ function setPageTitle(suffix = 'Share File') {
 }
 
 /**
- * 插入文件重定向 URL 的 <meta> 元素。
- * @param {string} redirectURL - 文件重定向 URL。
+ * 处理文件重定向和提取码显示。
+ * @param {FileInfo} fileInfo - 包含文件信息的对象。
  */
-function updateFileRedirectURL(redirectURL) {
-  // 当 newURL 不为空时执行更新
-  if (redirectURL) {
-    // 创建新的 meta 元素
-    const newMetaElement = document.createElement('meta')
-    newMetaElement.setAttribute('http-equiv', 'Refresh')
-    newMetaElement.setAttribute('content', `0; URL=${redirectURL}`)
+function handleRedirect(fileInfo) {
+  // 当 redirectURL 不为空时执行更新
+  if (fileInfo.redirectURL) {
+    // 如果提取码不为空
+    if (fileInfo.extractCode) {
+      // 使用 prompt 显示提取码，并让用户手动点击复制
+      alert(
+        '请手动选择文本并按 Ctrl + C 或 Cmd + C 复制，然后点击确定以继续跳转至其它网页。\n' +
+          '\n提取码：' +
+          fileInfo.extractCode
+      )
 
-    // 将新的 meta 元素插入到头部
-    document.head.appendChild(newMetaElement)
+      // 创建新的 meta 元素
+      const newMetaElement = document.createElement('meta')
+      newMetaElement.setAttribute('http-equiv', 'Refresh')
+      newMetaElement.setAttribute('content', `0; URL=${fileInfo.redirectURL}`)
+
+      // 将新的 meta 元素插入到头部
+      document.head.appendChild(newMetaElement)
+    }
   }
 }
