@@ -5,8 +5,8 @@
  * @property {string} redirectURL - 文件重定向URL。
  */
 const redirectFileInfo = {
-  extractCode: '',
-  redirectURL: ''
+  extractCode: 'QwLu',
+  redirectURL: 'https://www.alipan.com/s/sG648nWXvXm'
 }
 
 /**
