@@ -6,8 +6,7 @@
  */
 const redirectFileInfo = {
   extractCode: 'Cykv',
-  redirectURL:
-    'https://www.alipan.com/s/Ubm5fnZDuKh'
+  redirectURL: 'https://www.alipan.com/s/Ubm5fnZDuKh'
 }
 
 /**
