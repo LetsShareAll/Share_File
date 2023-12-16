@@ -12,5 +12,18 @@ const redirectFileInfo = {
 /**
  * 包含文件信息的数组。
  * @type {Array}
+ * @propty {string} iconClass - 文件图标的 CSS 类。
+ * @propty {string} name - 文件或文件夹的名称。
+ * @propty {string} type - 文件或文件夹的类型，可以是 '文件' 或 '文件夹' 等。
+ * @propty {string} version - 文件的版本信息。
+ * @propty {string} date - 文件或文件夹的创建日期。
+ * @propty {string} description - 文件或文件夹的描述信息。
  */
-const fileList = []
+const fileList = [  {
+  iconClass: 'icon-directory',
+  name: 'android',
+  type: '文件夹',
+  version: '-',
+  date: '2023/12/16',
+  description: '安卓系统'
+},]
