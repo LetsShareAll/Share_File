@@ -1,36 +1,47 @@
 /**
- * 动态加载脚本文件并执行回调函数。
- * @param {string} url - 脚本文件的路径。
- * @param {Function} callback - 脚本加载完成后执行的回调函数。
+ * 用于存储已加载的脚本文件的数组。
+ * @type {string[]}
  */
-function loadScript(url, callback) {
-  var scriptElement = document.createElement("script");
-  scriptElement.setAttribute("src", url);
+var loadedScripts = [];
 
-  scriptElement.onload = callback;
+/**
+ * 动态加载脚本文件并返回一个 Promise。
+ * @param {string} url - 脚本文件的路径。
+ * @returns {Promise} - 表示脚本加载完成的 Promise。
+ */
+async function loadScript(url) {
+  return new Promise((resolve) => {
+    // 创建 <script> 元素
+    var scriptElement = document.createElement('script');
+    scriptElement.setAttribute('src', url);
 
-  document.body.appendChild(scriptElement);
-};
+    // 在脚本加载完成后触发 resolve
+    scriptElement.onload = resolve;
 
-// 当 DOMContentLoaded 事件触发时执行以下代码
-document.addEventListener("DOMContentLoaded", function () {
-  // 动态加载脚本文件 file-info.js
-  loadScript("./file-info.js");
+    // 将 <script> 元素添加到 <body> 中
+    document.body.appendChild(scriptElement);
+  });
+}
 
-  // 动态加载脚本文件 template-utils.js
-  loadScript("/scripts/template-utils.js");
-
-  // 动态加载脚本文件 page-utils.js，并在加载完成后执行回调函数
-  loadScript("/scripts/page-utils.js", function () {
-    // 当 page-utils.js 加载完成后执行以下操作
+/**
+ * 当 DOMContentLoaded 事件触发时执行以下异步函数。
+ */
+document.addEventListener('DOMContentLoaded', async function () {
+  try {
+    // 顺序加载脚本文件，使用 await 确保按顺序加载完成
+    await loadScript('./file-info.js');
+    await loadScript('/scripts/template-utils.js');
+    await loadScript('/scripts/page-utils.js');
 
     // 设置页面标题
     setPageTitle();
 
     // 更新文件重定向地址
     updateFileRedirectURL(fileRedirectURL);
-  });
 
-  // 动态加载脚本文件 load-template.js
-  loadScript("/scripts/load-template.js");
+    // 异步加载脚本文件
+    await loadScript('/scripts/load-template.js');
+  } catch (error) {
+    console.error('脚本加载失败：', error);
+  }
 });
