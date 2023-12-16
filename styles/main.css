@@ -1,15 +1,15 @@
 .icon-directory {
-  background-image: url("/images/directory.png");
+  background-image: url('/images/directory.png');
 }
 
 .icon-archive {
-  background-image: url("/images/archive.jpg");
+  background-image: url('/images/archive.jpg');
 }
 
 .icon-executable {
-  background-image: url("/images/executable.png");
+  background-image: url('/images/executable.png');
 }
 
 .icon-font {
-  background-image: url("/images/font.png");
+  background-image: url('/images/font.png');
 }

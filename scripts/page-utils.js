@@ -4,10 +4,10 @@
  */
 function setPageTitle(suffix = 'Share File') {
   // 获取当前页面的路径
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname
 
   // 将路径渲染到网页标题中，附带指定的后缀
-  document.title = `${currentPath} - ${suffix}`;
+  document.title = `${currentPath} - ${suffix}`
 }
 
 /**
@@ -18,11 +18,11 @@ function updateFileRedirectURL(redirectURL) {
   // 当 newURL 不为空时执行更新
   if (redirectURL) {
     // 创建新的 meta 元素
-    const newMetaElement = document.createElement('meta');
-    newMetaElement.setAttribute('http-equiv', 'Refresh');
-    newMetaElement.setAttribute('content', `0; URL=${redirectURL}`);
+    const newMetaElement = document.createElement('meta')
+    newMetaElement.setAttribute('http-equiv', 'Refresh')
+    newMetaElement.setAttribute('content', `0; URL=${redirectURL}`)
 
     // 将新的 meta 元素插入到头部
-    document.head.appendChild(newMetaElement);
+    document.head.appendChild(newMetaElement)
   }
 }

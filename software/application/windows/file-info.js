@@ -2,7 +2,7 @@
  * 文件重定向地址。
  * @type {string}
  */
-const fileRedirectURL = '';
+const fileRedirectURL = ''
 
 /**
  * 包含文件信息的数组。
@@ -15,5 +15,6 @@ const fileList = [
     type: 'Windows 应用程序',
     version: '150-82a',
     date: '2022/04/26',
-    description: '远程控制',
-  }];
+    description: '远程控制'
+  }
+]

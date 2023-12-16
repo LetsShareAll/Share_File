@@ -2,7 +2,7 @@
  * 用于存储已加载的脚本文件的数组。
  * @type {string[]}
  */
-var loadedScripts = [];
+var loadedScripts = []
 
 /**
  * 动态加载脚本文件并返回一个 Promise。
@@ -12,15 +12,15 @@ var loadedScripts = [];
 async function loadScript(url) {
   return new Promise((resolve) => {
     // 创建 <script> 元素
-    var scriptElement = document.createElement('script');
-    scriptElement.setAttribute('src', url);
+    var scriptElement = document.createElement('script')
+    scriptElement.setAttribute('src', url)
 
     // 在脚本加载完成后触发 resolve
-    scriptElement.onload = resolve;
+    scriptElement.onload = resolve
 
     // 将 <script> 元素添加到 <body> 中
-    document.body.appendChild(scriptElement);
-  });
+    document.body.appendChild(scriptElement)
+  })
 }
 
 /**
@@ -29,19 +29,19 @@ async function loadScript(url) {
 document.addEventListener('DOMContentLoaded', async function () {
   try {
     // 顺序加载脚本文件，使用 await 确保按顺序加载完成
-    await loadScript('./file-info.js');
-    await loadScript('/scripts/template-utils.js');
-    await loadScript('/scripts/page-utils.js');
+    await loadScript('./file-info.js')
+    await loadScript('/scripts/template-utils.js')
+    await loadScript('/scripts/page-utils.js')
 
     // 设置页面标题
-    setPageTitle();
+    setPageTitle()
 
     // 更新文件重定向地址
-    updateFileRedirectURL(fileRedirectURL);
+    updateFileRedirectURL(fileRedirectURL)
 
     // 异步加载脚本文件
-    await loadScript('/scripts/load-template.js');
+    await loadScript('/scripts/load-template.js')
   } catch (error) {
-    console.error('脚本加载失败：', error);
+    console.error('脚本加载失败：', error)
   }
-});
+})

@@ -2,7 +2,7 @@
  * 文件重定向地址。
  * @type {string}
  */
-const fileRedirectURL = '';
+const fileRedirectURL = ''
 
 /**
  * 包含文件信息的数组。
@@ -15,6 +15,6 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2023/04/14',
-    description: '字体',
+    description: '字体'
   }
-];
+]
