@@ -10,14 +10,6 @@ const fileRedirectURL = '';
  */
 const fileList = [
   {
-    iconClass: '',
-    name: '名称',
-    type: '类型',
-    version: '版本',
-    date: '更新日期',
-    description: '备注'
-  },
-  {
     iconClass: 'icon-archive',
     name: 'Let`s Play All.zip',
     type: '压缩 (zipped) 文件',
