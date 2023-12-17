@@ -36,3 +36,19 @@ function handleRedirect(fileInfo) {
     }
   }
 }
+
+/**
+ * 向指定元素插入 HTML。
+ * @param {string} targetElementId - 目标元素的 ID。
+ * @param {string} htmlContent - 要插入的 HTML 字符串。
+ */
+function insertHTML(targetElementId, htmlContent) {
+  const targetElement = document.getElementById(targetElementId)
+
+  // 使用 const 替代 let，因为 targetElement 不会被重新赋值
+  if (targetElement) {
+    targetElement.innerHTML = htmlContent
+  } else {
+    console.error(`${TARGET_NOT_FOUND_ERROR}（ID: ${targetElementId}）。`)
+  }
+}

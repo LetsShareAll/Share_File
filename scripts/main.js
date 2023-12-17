@@ -29,12 +29,13 @@ async function loadScript(url) {
 document.addEventListener('DOMContentLoaded', async function () {
   try {
     // 顺序加载脚本文件，使用 await 确保按顺序加载完成
+    await loadScript('/scripts/constants.js')
     await loadScript('./file-info.js')
     await loadScript('/scripts/template-utils.js')
     await loadScript('/scripts/page-utils.js')
 
     // 设置页面标题
-    setPageTitle()
+    setPageTitle(pageTitleSuffix)
 
     // 处理文件重定向
     handleRedirect(redirectFileInfo)

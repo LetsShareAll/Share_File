@@ -1,12 +1,29 @@
-// 导入 header
-importTemplateAndScript('/templates/header.html', 'header')
+// 导入 header，并插入 header.js
+importAndRenderTemplate(
+  '/templates/header.html',
+  '#header',
+  false,
+  '',
+  '/scripts/header.js',
+  emptyContent
+)
 
 // 导入 nav，并插入 nav.js
-importTemplateAndScript('/templates/nav.html', 'nav', '/scripts/nav.js')
+importAndRenderTemplate(
+  '/templates/nav.html',
+  '#nav',
+  false,
+  '',
+  '/scripts/nav.js',
+  emptyContent
+)
 
 // 导入 file-list，并插入 file-list.js
-importTemplateAndScript(
+importAndRenderTemplate(
   '/templates/file-list.html',
-  'file-list',
-  '/scripts/file-list.js'
+  '#file-list',
+  false,
+  '',
+  '/scripts/file-list.js',
+  emptyContent
 )
