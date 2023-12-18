@@ -26,7 +26,7 @@ const fileEmptyContent = `<td colspan="6">这里空空如也(ˉ▽ˉ；)...</td>
  * @type  {string}
  */
 const redirectPromptHTMLAliYun =
-  '请注意<b>复制提取码，在下载文件后请去除文件尾部的“.pdf”后缀</b>！完成以后点击确认将跳转至阿里云盘。'
+  '请注意<b>复制提取码</b>！<br />' + '点击<kbd>确认</kbd>将跳转至阿里云盘。'
 
 /**
  * 找不到目标元素时的错误消息。
