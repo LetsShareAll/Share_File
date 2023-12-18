@@ -5,7 +5,7 @@ importAndRenderTemplate(
   false,
   '',
   '/scripts/header.js',
-  emptyContent
+  fileEmptyContent
 )
 
 // 导入 nav，并插入 nav.js
@@ -15,7 +15,7 @@ importAndRenderTemplate(
   false,
   '',
   '/scripts/nav.js',
-  emptyContent
+  fileEmptyContent
 )
 
 // 导入 file-list，并插入 file-list.js
@@ -25,5 +25,5 @@ importAndRenderTemplate(
   false,
   '',
   '/scripts/file-list.js',
-  emptyContent
+  fileEmptyContent
 )

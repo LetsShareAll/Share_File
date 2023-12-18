@@ -24,6 +24,28 @@ async function loadScript(url) {
 }
 
 /**
+ * 关闭对话框的函数。
+ * 隐藏对话框元素。
+ * @param {string} dialogElementSelector - 对话框元素的选择器。
+ */
+function closeDialog(dialogElementSelector) {
+  const dialogContainer = document.querySelector(dialogElementSelector)
+  if (dialogContainer) {
+    dialogContainer.style.display = 'none'
+  } else {
+    console.error(`Dialog element not found: ${dialogElementSelector}`)
+  }
+}
+
+/**
+ * 选中文本框内的内容。
+ * @param {HTMLInputElement} inputElement - 输入框元素。
+ */
+function selectText(inputElement) {
+  inputElement.select()
+}
+
+/**
  * 当 DOMContentLoaded 事件触发时执行以下异步函数。
  */
 document.addEventListener('DOMContentLoaded', async function () {

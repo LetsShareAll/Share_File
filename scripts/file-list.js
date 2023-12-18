@@ -5,5 +5,5 @@ importAndRenderTemplate(
   fileList,
   'file',
   '',
-  emptyContent
+  fileEmptyContent
 )

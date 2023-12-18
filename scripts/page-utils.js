@@ -11,29 +11,36 @@ function setPageTitle(suffix = 'Share File') {
 }
 
 /**
+ * 创建并插入包含重定向信息的 meta 元素到头部。
+ * @param {string} redirectURL - 重定向的URL。
+ */
+function createAndInsertMetaElement(redirectURL) {
+  // 创建新的 meta 元素
+  const newMetaElement = document.createElement('meta')
+  newMetaElement.setAttribute('http-equiv', 'Refresh')
+  newMetaElement.setAttribute('content', `0; URL=${redirectURL}`)
+
+  // 将新的 meta 元素插入到头部
+  document.head.appendChild(newMetaElement)
+}
+
+/**
  * 处理文件重定向和提取码显示。
- * @param {FileInfo} fileInfo - 包含文件信息的对象。
+ * @param {FileInfo} fileInfo - 包含文件信息的对象，其中包括提取码、跳转提醒内容和提取码提示。
  */
 function handleRedirect(fileInfo) {
   // 当 redirectURL 不为空时执行更新
   if (fileInfo.redirectURL) {
-    // 如果提取码不为空
-    if (fileInfo.extractCode) {
-      // 使用 prompt 显示提取码，并让用户手动点击复制
-      alert(
-        '请手动选择文本并按 Ctrl + C 或 Cmd + C 复制，然后点击确定以继续跳转至其它网页。\n' +
-          '\n提取码：' +
-          fileInfo.extractCode
-      )
-
-      // 创建新的 meta 元素
-      const newMetaElement = document.createElement('meta')
-      newMetaElement.setAttribute('http-equiv', 'Refresh')
-      newMetaElement.setAttribute('content', `0; URL=${fileInfo.redirectURL}`)
-
-      // 将新的 meta 元素插入到头部
-      document.head.appendChild(newMetaElement)
-    }
+    // 使用自定义弹出窗口替换整个页面显示跳转提醒内容
+    loadScript('/scripts/redirect-dialog.js')
+    importAndRenderTemplate(
+      '/templates/redirect-dialog.html',
+      'body',
+      [fileInfo],
+      'info',
+      '/scripts/redirect-dialog.js',
+      ''
+    )
   }
 }
 
