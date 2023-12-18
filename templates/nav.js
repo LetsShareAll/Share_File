@@ -26,8 +26,9 @@ for (var i = 0; i < pathParts.length; i++) {
 
   if (pathPart !== '') {
     var linkElement = document.createElement('a')
+    // 使用 decodeURIComponent 解码路径部分
     linkElement.href = baseURL + '/' + pathParts.slice(1, i + 1).join('/')
-    linkElement.innerText = pathPart
+    linkElement.innerText = decodeURIComponent(pathPart)
     pathElement.appendChild(linkElement)
   }
 
