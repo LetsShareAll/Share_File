@@ -11,14 +11,30 @@ function setPageTitle(suffix = 'Share File') {
 }
 
 /**
- * 创建并插入包含重定向信息的 meta 元素到头部。
- * @param {string} redirectURL - 重定向的URL。
+ * 创建并插入包含 meta 信息的 meta 元素到头部。
+ * @param {Object} metaInfo - 包含 meta 信息的对象。
+ * @property {string} httpEquiv - meta 标签的 http-equiv 属性。
+ * @property {string} content - meta 标签的 content 属性。
+ * @property {string} [name] - meta 标签的 name 属性（可选）。
+ * @property {string} [charset] - meta 标签的 charset 属性（可选）。
  */
-function createAndInsertMetaElement(redirectURL) {
+function createAndInsertMetaElement(metaInfo) {
   // 创建新的 meta 元素
   const newMetaElement = document.createElement('meta')
-  newMetaElement.setAttribute('http-equiv', 'Refresh')
-  newMetaElement.setAttribute('content', `0; URL=${redirectURL}`)
+
+  // 设置 meta 标签属性
+  if (metaInfo.httpEquiv) {
+    newMetaElement.setAttribute('http-equiv', metaInfo.httpEquiv)
+  }
+  if (metaInfo.content) {
+    newMetaElement.setAttribute('content', metaInfo.content)
+  }
+  if (metaInfo.name) {
+    newMetaElement.setAttribute('name', metaInfo.name)
+  }
+  if (metaInfo.charset) {
+    newMetaElement.setAttribute('charset', metaInfo.charset)
+  }
 
   // 将新的 meta 元素插入到头部
   document.head.appendChild(newMetaElement)
@@ -37,7 +53,7 @@ function handleRedirect(fileInfo) {
       'body',
       [fileInfo],
       'info',
-      '/scripts/redirect-dialog.js',
+      '/templates/redirect-dialog.js',
       ''
     )
   }
@@ -56,5 +72,24 @@ function insertHTML(targetElementId, htmlContent) {
     targetElement.innerHTML = htmlContent
   } else {
     console.error(`${TARGET_NOT_FOUND_ERROR}（ID: ${targetElementId}）。`)
+  }
+}
+
+/**
+ * 修改指定网页元素的样式。
+ * @param {string} elementSelector - 要修改样式的元素选择器。
+ * @param {Object} styles - 包含要应用的样式的对象。
+ * @example
+ * // 修改 ID 为 "myElement" 的元素的背景颜色和字体颜色
+ * applyStyles('#myElement', { backgroundColor: 'red', color: 'white' });
+ */
+function applyStyles(elementSelector, styles) {
+  const targetElement = document.querySelector(elementSelector)
+
+  if (targetElement) {
+    // 使用 Object.assign 将 styles 对象的样式应用到元素
+    Object.assign(targetElement.style, styles)
+  } else {
+    console.error(`Element not found: ${elementSelector}`)
   }
 }

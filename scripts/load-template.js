@@ -4,7 +4,7 @@ importAndRenderTemplate(
   '#header',
   false,
   '',
-  '/scripts/header.js',
+  '/templates/header.js',
   fileEmptyContent
 )
 
@@ -14,7 +14,7 @@ importAndRenderTemplate(
   '#nav',
   false,
   '',
-  '/scripts/nav.js',
+  '/templates/nav.js',
   fileEmptyContent
 )
 
@@ -24,6 +24,6 @@ importAndRenderTemplate(
   '#file-list',
   false,
   '',
-  '/scripts/file-list.js',
+  '/templates/file-list.js',
   fileEmptyContent
 )

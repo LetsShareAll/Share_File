@@ -42,6 +42,17 @@ async function importAndRenderTemplate(
     if (dataList.length === 0) {
       // 如果数据为空，插入提示行或自定义内容
       renderEmptyContent(targetElement, emptyContent)
+    }
+    if (dataList.length === 1) {
+      // 渲染数据列表
+      renderDataList(targetElement, dataList, templateContent, rowClass)
+
+      // 如果提供了脚本路径，则添加 script 标签以插入脚本
+      if (scriptPath) {
+        await loadScript(scriptPath)
+      }
+
+      return
     } else {
       // 渲染数据列表
       renderDataList(targetElement, dataList, templateContent, rowClass)

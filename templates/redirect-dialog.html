@@ -4,29 +4,35 @@
       <h2>确认操作</h2>
     </div>
     <div class="dialog-content">
-      <p>
-        即将跳转至：
-        <a
-          href="${info.redirectURL}"
-          target="_blank"
-        >
-          ${info.redirectURL}
-        </a>
-      </p>
-      <p>${info.redirectPromptHTML}</p>
-      <p>
-        提取码：
-        <span class="code-and-textarea">
-          <textarea
-            readonly="true"
-            class="dialog-textarea"
-            placeholder="${info.extractCode}"
-            onclick="selectText(this)"
+      <div class="dialog-url">
+        <p>
+          即将跳转至：
+          <a
+            href="${info.redirectURL}"
+            target="_blank"
           >
+            ${info.redirectURL}
+          </a>
+        </p>
+      </div>
+      <div class="dialog-prompt">
+        <p>${info.redirectPromptHTML}</p>
+      </div>
+      <div class="dialog-code">
+        <p>
+          提取码：
+          <span class="code-and-textarea">
+            <textarea
+              readonly="true"
+              class="dialog-textarea"
+              placeholder="${info.extractCode}"
+              onclick="selectText(this)"
+            >
 ${info.extractCode}</textarea
-          >
-        </span>
-      </p>
+            >
+          </span>
+        </p>
+      </div>
     </div>
     <div class="dialog-footer">
       <button
@@ -46,13 +52,13 @@ ${info.extractCode}</textarea
 </div>
 <style>
   .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -87,6 +93,19 @@ ${info.extractCode}</textarea
   .dialog-content a {
     word-wrap: break-word;
   }
+
+  .dialog-url {
+    display: none;
+  }
+
+  .dialog-prompt {
+    display: none;
+  }
+
+  .dialog-code {
+    display: none;
+  }
+
   .code-and-textarea {
     display: inline-block;
     vertical-align: top;
