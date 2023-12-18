@@ -29,6 +29,13 @@ const redirectPromptHTMLAliYun =
   '请注意<b>复制提取码</b>！<br />' + '点击<kbd>确认</kbd>将跳转至阿里云盘。'
 
 /**
+ * 重定向至 123 云盘时显示的提醒内容。
+ * @type  {string}
+ */
+const redirectPromptHTML123Yun =
+  '请注意<b>复制提取码</b>！<br />' + '点击<kbd>确认</kbd>将跳转至 123 云盘。'
+
+/**
  * 找不到目标元素时的错误消息。
  * @type {string}
  */
