@@ -6,7 +6,7 @@
  * 页面标题的后缀，默认为 Share File。
  * @type {string}
  */
-const pageTitleSuffix = ''
+const pageTitleSuffix = '一起分享吧！文件！'
 
 /**
  * 网页标头显示的标题。
