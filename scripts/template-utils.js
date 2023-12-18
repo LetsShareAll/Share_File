@@ -33,7 +33,7 @@ async function importAndRenderTemplate(
 
       // 如果提供了脚本路径，则添加 script 标签以插入脚本
       if (scriptPath) {
-        await loadScript(scriptPath)
+        await loadScriptAsync(scriptPath)
       }
 
       return
@@ -49,7 +49,7 @@ async function importAndRenderTemplate(
 
       // 如果提供了脚本路径，则添加 script 标签以插入脚本
       if (scriptPath) {
-        await loadScript(scriptPath)
+        await loadScriptAsync(scriptPath)
       }
 
       return

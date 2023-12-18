@@ -6,7 +6,6 @@
  * @property {string} extractCode - 文件提取码。
  */
 function showDialog(info) {
-  console.log(info)
   // 判断条件：当redirectPromptHTML和extractCode都为空或未定义时不显示对话框
   if (!info.redirectPromptHTML && !info.extractCode) {
     redirectToURL(info.redirectURL, 0)
@@ -34,16 +33,37 @@ function showDialog(info) {
 }
 
 /**
- * 关闭对话框的函数。
- * 隐藏对话框元素。
- * @param {string} dialogElementSelector - 对话框元素的选择器。
+ * 关闭对话框和覆盖层，并执行回调函数（如果提供）。
+ * @param {string} overlaySelector - 覆盖层的选择器。
+ * @param {boolean} [goBack=false] - 是否退回上一级页面。
+ * @param {Function} [callback] - 关闭对话框后执行的回调函数。
  */
-function closeDialog(dialogElementSelector) {
-  const dialogContainer = document.querySelector(dialogElementSelector)
-  if (dialogContainer) {
-    dialogContainer.style.display = 'none'
+function closeDialog(overlaySelector, goBack = false, callback) {
+  // 获取覆盖层元素
+  const overlay = document.querySelector(overlaySelector)
+
+  // 检查覆盖层是否存在
+  if (overlay) {
+    // 关闭对话框
+    overlay.style.display = 'none'
+
+    // 执行回调函数（如果提供）
+    if (callback && typeof callback === 'function') {
+      callback()
+    }
+
+    // 如果需要退回上一级页面
+    if (goBack) {
+      // 判断浏览器是否支持历史记录
+      if (window.history && window.history.back) {
+        // 退回上一级
+        window.history.back()
+      } else {
+        console.warn('浏览器不支持历史记录，无法执行退回操作。')
+      }
+    }
   } else {
-    console.error(`Dialog element not found: ${dialogElementSelector}`)
+    console.warn(`未找到指定的覆盖层元素：${overlaySelector}`)
   }
 }
 
