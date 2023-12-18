@@ -11,6 +11,25 @@ function setPageTitle(suffix = 'Share File') {
 }
 
 /**
+ * 执行页面重定向。
+ * @param {string} redirectURL - 要重定向到的 URL。
+ * @param {number} delay - 重定向延迟时间（以毫秒为单位）。
+ * @example
+ * // 在 3 秒后将页面重定向到 "https://example.com"
+ * redirectToURL('https://example.com', 3000);
+ */
+function redirectToURL(redirectURL, delay) {
+  // 创建包含重定向信息的 meta 元素
+  const metaInfo = {
+    httpEquiv: 'Refresh',
+    content: `${delay / 1000}; URL=${redirectURL}`
+  }
+
+  // 插入 meta 元素到头部，实现页面重定向
+  createAndInsertMetaElement(metaInfo)
+}
+
+/**
  * 创建并插入包含 meta 信息的 meta 元素到头部。
  * @param {Object} metaInfo - 包含 meta 信息的对象。
  * @property {string} httpEquiv - meta 标签的 http-equiv 属性。

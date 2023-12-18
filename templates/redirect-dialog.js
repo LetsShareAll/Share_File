@@ -9,10 +9,7 @@ function showDialog(info) {
   console.log(info)
   // 判断条件：当redirectPromptHTML和extractCode都为空或未定义时不显示对话框
   if (!info.redirectPromptHTML && !info.extractCode) {
-    createAndInsertMetaElement({
-      httpEquiv: 'Refresh',
-      content: `0; URL=${info.redirectURL}`
-    })
+    redirectToURL(info.redirectURL, 0)
     return
   }
 
