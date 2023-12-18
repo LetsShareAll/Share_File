@@ -32,7 +32,6 @@ function handleRedirect(fileInfo) {
   // 当 redirectURL 不为空时执行更新
   if (fileInfo.redirectURL) {
     // 使用自定义弹出窗口替换整个页面显示跳转提醒内容
-    loadScript('/scripts/redirect-dialog.js')
     importAndRenderTemplate(
       '/templates/redirect-dialog.html',
       'body',

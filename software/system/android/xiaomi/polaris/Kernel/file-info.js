@@ -6,7 +6,8 @@
  */
 const redirectFileInfo = {
   extractCode: 'QwLu',
-  redirectURL: 'https://www.alipan.com/s/sG648nWXvXm'
+  redirectURL: 'https://www.alipan.com/s/sG648nWXvXm',
+  redirectPromptHTML: redirectPromptHTMLAliYun
 }
 
 /**

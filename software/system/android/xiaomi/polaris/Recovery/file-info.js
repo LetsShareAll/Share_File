@@ -6,7 +6,8 @@
  */
 const redirectFileInfo = {
   extractCode: 'zBGA',
-  redirectURL: 'https://www.alipan.com/s/BwyEeehnmM6'
+  redirectURL: 'https://www.alipan.com/s/BwyEeehnmM6',
+  redirectPromptHTML: redirectPromptHTMLAliYun
 }
 
 /**

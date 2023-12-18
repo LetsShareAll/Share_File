@@ -7,8 +7,7 @@
 const redirectFileInfo = {
   extractCode: '5c8e',
   redirectURL: 'https://www.alipan.com/s/yAziQgqefpL',
-  redirectPromptHTML:
-    '请注意复制提取码，在下载文件后请去除文件尾部的“.pdf”后缀！完成以后点击确认将跳转至阿里云盘。'
+  redirectPromptHTML: redirectPromptHTMLAliYun
 }
 
 /**

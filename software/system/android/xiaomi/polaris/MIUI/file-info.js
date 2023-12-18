@@ -6,7 +6,8 @@
  */
 const redirectFileInfo = {
   extractCode: '',
-  redirectURL: ''
+  redirectURL: '',
+  redirectPromptHTML: redirectPromptHTMLAliYun
 }
 
 /**
