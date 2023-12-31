@@ -35,5 +35,13 @@ const fileList = [
     version: '-',
     date: '2022/04/26',
     description: 'Windows 平台应用程序'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'music',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/31',
+    description: '音乐应用程序'
   }
 ]
