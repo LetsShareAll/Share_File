@@ -22,7 +22,7 @@ const redirectFileInfo = {
 const fileList = [
   {
     iconClass: 'icon-directory',
-    name: 'Basehand',
+    name: 'Baseband',
     type: '文件夹',
     version: '-',
     date: '2024/01/04',
