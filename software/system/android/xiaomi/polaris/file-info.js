@@ -22,6 +22,14 @@ const redirectFileInfo = {
 const fileList = [
   {
     iconClass: 'icon-directory',
+    name: 'Basehand',
+    type: '文件夹',
+    version: '-',
+    date: '2024/01/04',
+    description: 'MIX 2S（polaris）的基带备份'
+  },
+  {
+    iconClass: 'icon-directory',
     name: 'Evolution X',
     type: '文件夹',
     version: '-',
