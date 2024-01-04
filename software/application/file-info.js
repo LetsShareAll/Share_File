@@ -22,19 +22,11 @@ const redirectFileInfo = {
 const fileList = [
   {
     iconClass: 'icon-directory',
-    name: 'linux',
+    name: 'code',
     type: '文件夹',
     version: '-',
-    date: '2022/12/03',
-    description: 'Linux 平台应用程序'
-  },
-  {
-    iconClass: 'icon-directory',
-    name: 'windows',
-    type: '文件夹',
-    version: '-',
-    date: '2022/04/26',
-    description: 'Windows 平台应用程序'
+    date: '2023/12/31',
+    description: '编程'
   },
   {
     iconClass: 'icon-directory',
@@ -42,6 +34,22 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2023/12/31',
-    description: '音乐应用程序'
+    description: '音乐'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'remote',
+    type: '文件夹',
+    version: '-',
+    date: '2022/12/03',
+    description: '远程'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'tool',
+    type: '文件夹',
+    version: '-',
+    date: '2022/04/26',
+    description: '工具'
   }
 ]

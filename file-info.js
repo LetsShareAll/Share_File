@@ -27,7 +27,7 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2023/12/15',
-    description: '其他'
+    description: '文档'
   },
   {
     iconClass: 'icon-directory',
@@ -35,7 +35,7 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2022/05/26',
-    description: '其他'
+    description: '其它'
   },
   {
     iconClass: 'icon-directory',
@@ -43,7 +43,7 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2022/06/02',
-    description: '游戏'
+    description: '图片'
   },
   {
     iconClass: 'icon-directory',
@@ -51,7 +51,7 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2023/12/15',
-    description: '应用程序'
+    description: '软件'
   },
   {
     iconClass: 'icon-directory',
@@ -59,6 +59,6 @@ const fileList = [
     type: '文件夹',
     version: '-',
     date: '2023/12/14',
-    description: '其他'
+    description: '视频'
   }
 ]
