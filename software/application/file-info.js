@@ -38,6 +38,14 @@ const fileList = [
   },
   {
     iconClass: 'icon-directory',
+    name: 'network',
+    type: '文件夹',
+    version: '-',
+    date: '2024/01/11',
+    description: '网络'
+  },
+  {
+    iconClass: 'icon-directory',
     name: 'remote',
     type: '文件夹',
     version: '-',
