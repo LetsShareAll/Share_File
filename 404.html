@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>404 测试</title>
+  </head>
+  <body>
+    <div>
+      <h1>404</h1>
+      <h2>（X﹏X）当前页面未找到！！！</h2>
+    </div>
+    <div>
+      当前路径：
+      <span id="current-href"></span>
+    </div>
+    <div>
+      即将跳转至：
+      <span id="redirect-url"></span>
+    </div>
+    <script>
+      let currentHref = window.location.href
+      document.getElementById('current-href').innerText = currentHref
+      let redirectUrl =
+        window.location.origin + '/?path=' + window.location.pathname
+      document.getElementById('redirect-url').innerText = redirectUrl
+    </script>
+    <!-- <script src="/scripts/main.js"></script> -->
+  </body>
+</html>
