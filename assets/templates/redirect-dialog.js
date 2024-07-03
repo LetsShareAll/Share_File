@@ -76,3 +76,4 @@ function selectText(inputElement) {
 }
 
 showDialog(redirectFileInfo)
+

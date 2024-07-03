@@ -112,3 +112,4 @@ function applyStyles(elementSelector, styles) {
     console.error(`Element not found: ${elementSelector}`)
   }
 }
+

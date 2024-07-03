@@ -37,3 +37,4 @@ for (var i = 0; i < pathParts.length; i++) {
     pathElement.appendChild(separatorElement)
   }
 }
+

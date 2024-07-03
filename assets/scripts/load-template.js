@@ -27,3 +27,4 @@ importAndRenderTemplate(
   '/assets/templates/file-list.js',
   fileEmptyContent
 )
+

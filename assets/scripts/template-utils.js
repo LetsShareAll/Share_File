@@ -128,3 +128,4 @@ function renderDataList(targetElement, dataList, templateContent, rowClass) {
     targetElement.appendChild(row)
   })
 }
+

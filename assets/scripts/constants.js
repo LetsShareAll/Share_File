@@ -52,3 +52,4 @@ const ERROR_FETCHING_TEMPLATE = `获取和渲染模板文件时发生错误`
  * @type {string}
  */
 const ERROR_FETCHING_INSERTING = `获取和插入时发生错误`
+

@@ -5,9 +5,9 @@
  * @property {string} redirectURL - 文件重定向URL。
  */
 const redirectFileInfo = {
-  // extractCode: '',
-  // redirectURL: '',
-  // redirectPromptHTML: ''
+  extractCode: '',
+  redirectURL: '',
+  redirectPromptHTML: ''
 }
 
 /**
@@ -21,13 +21,53 @@ const redirectFileInfo = {
  * @propty {string} description - 文件或文件夹的描述信息。
  */
 const fileList = [
-  // {
-  //   iconClass: '',
-  //   name: '',
-  //   type: '',
-  //   version: '',
-  //   date: '',
-  //   description: ''
-  // }
+  {
+    iconClass: 'icon-directory',
+    name: 'document',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/15',
+    description: '文档'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'music',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/15',
+    description: '音乐'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'other',
+    type: '文件夹',
+    version: '-',
+    date: '2022/05/26',
+    description: '其它'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'picture',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/14',
+    description: '图片'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'software',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/15',
+    description: '软件'
+  },
+  {
+    iconClass: 'icon-directory',
+    name: 'video',
+    type: '文件夹',
+    version: '-',
+    date: '2023/12/14',
+    description: '视频'
+  }
 ]
 
